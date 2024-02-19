@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="recordat.css">
+        <link
+            href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+            <link rel="shortcut icon" href="asdasd.png" type="image/x-icon">
+        <title>STE | Recordatorios</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/>
+    </head>
+
+    <body>
+        <nav class="sidebar close">
+            <header>
+                <div class="text logo">
+                    <span class="name">STE</span>
+                    <span class="profe">Sistema Tecnológico<br>Estudiantil</span>
+                </div>
+                <i class="bx bx-menu toggle"></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="home.html">
+                                <i class="bx bx-home-alt icon"></i>
+                                <span class="text nav-text">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="libros.html">
+                                <i class="bx bx-book icon"></i>
+                                <span class="text nav-text">Libros</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="LaIA.html">
+                                <i class="bx bx-bot icon"></i>
+                                <span class="text nav-text">LaIA</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="calculadora.html">
+                                <i class="bx bx-calculator icon"></i>
+                                <span class="text nav-text">Calculadora</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="recordat.html">
+                                <i class="bx bx-stopwatch icon"></i>
+                                <span class="text nav-text">Recordatorios</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="index.html">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="text nav-text">Salir</span>
+                        </a>
+                    </li>
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class="bx bx-sun icon sun"></i>
+                            <i class="bx bx-moon icon moon"></i>
+                        </div>
+                        <span class="mode-text text">Tema claro</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <section class="home">
+            <div class="text">
+                Recordatorios
+            </div>
+
+            <div class="list roundBorder">
+                <form onsubmit="addNewTask(event)">
+                    <input
+                        type="text"
+                        name="taskText"
+                        autocomplete="off"
+                        placeholder="Nueva tarea"
+                        class="roundBorder">
+                    <button type="submit" class="addTaskButton">+</button>
+                    <button
+                        type="button"
+                        class="orderButton roundBorder"
+                        onclick="renderOrderedTasks()">Ordenar</button>
+                </form>
+                <div id="tasksContainer"></div>
+            </div>
+
+            <!-- SEPARACIÓN CALENDARIO-TAREAS -->
+
+            <div class="container">
+                <div class="left">
+                    <div class="calendar">
+                        <div class="month">
+                            <i class="fas fa-angle-left prev"></i>
+                            <div class="date">enero 2024</div>
+                            <i class="fas fa-angle-right next"></i>
+                        </div>
+                        <div class="weekdays">
+                            <div>Domingo</div>
+                            <div>Lunes</div>
+                            <div>Martes</div>
+                            <div>Miércoles</div>
+                            <div>Jueves</div>
+                            <div>Viernes</div>
+                            <div>Sábado</div>
+                        </div>
+                        <div class="days"></div>
+                        <div class="goto-today">
+                            <div class="goto">
+                                <input type="text" placeholder="mm/aaaa" class="date-input"/>
+                                <button class="goto-btn">Ir</button>
+                            </div>
+                            <button class="today-btn">Hoy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="today-date">
+                        <div class="event-day">Sábado</div>
+                        <div class="event-date">13 enero 2024</div>
+                    </div>
+                    <div class="events"></div>
+                    <div class="add-event-wrapper">
+                        <div class="add-event-header">
+                            <div class="title">Nuevo evento</div>
+                            <i class="fas fa-times close"></i>
+                        </div>
+                        <div class="add-event-body">
+                            <div class="add-event-input">
+                                <input type="text" placeholder="Nombre del evento" class="event-name"/>
+                            </div>
+                            <div class="add-event-input">
+                                <input type="text" placeholder="Hora de inicio" class="event-time-from"/>
+                            </div>
+                            <div class="add-event-input">
+                                <input type="text" placeholder="Hora de finalización" class="event-time-to"/>
+                            </div>
+                        </div>
+                        <div class="add-event-footer">
+                            <button class="add-event-btn">Añadir</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="add-event">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </section>
+
+        <audio id="backgroundMusic" loop>
+            <source src="Sparks.mp3" type="audio/mp3">
+            Tu navegador no soporta la etiqueta de audio.
+          </audio>
+
+        <script src="recordat.js"></script>
+    </body>
+</html>

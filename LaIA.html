@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="LaIA.css">
+        <link
+            href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+            <link rel="shortcut icon" href="LaIA_avatar.png" type="image/x-icon">
+        <title>STE | LaIA</title>
+    </head>
+
+    <body>
+        <nav class="sidebar close">
+            <header>
+                <div class="text logo">
+                    <span class="name">STE</span>
+                    <span class="profe">Sistema Tecnológico<br>Estudiantil</span>
+                </div>
+                <i class="bx bx-menu toggle"></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="home.html">
+                                <i class="bx bx-home-alt icon"></i>
+                                <span class="text nav-text">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="libros.html">
+                                <i class="bx bx-book icon"></i>
+                                <span class="text nav-text">Libros</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="LaIA.html">
+                                <i class="bx bx-bot icon"></i>
+                                <span class="text nav-text">LaIA</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="calculadora.html">
+                                <i class="bx bx-calculator icon"></i>
+                                <span class="text nav-text">Calculadora</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="recordat.html">
+                                <i class="bx bx-stopwatch icon"></i>
+                                <span class="text nav-text">Recordatorios</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="index.html">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="text nav-text">Salir</span>
+                        </a>
+                    </li>
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class="bx bx-sun icon sun"></i>
+                            <i class="bx bx-moon icon moon"></i>
+                        </div>
+                        <span class="mode-text text">Tema claro</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <!-- PARTE DE LAIA -->
+
+        <div id="chat-container">
+            <div id="chat-header">
+                <h5>LaIA</h4>
+            </div>
+            <div id="chat-box"></div>
+            <div id="input-box">
+                <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+                <button id="send-button" onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+
+        <audio id="backgroundMusic" loop>
+            <source src="Sparks.mp3" type="audio/mp3">
+            Tu navegador no soporta la etiqueta de audio.
+          </audio>
+
+        <script src="LaIA.js"></script>
+    </body>
+</html>
