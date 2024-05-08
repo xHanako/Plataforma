@@ -288,7 +288,7 @@ body.dark .home .text {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 37vh;
+    top: 25vh;
     right: 30px;
     font-size: 15px;
     color: #242526;
@@ -306,7 +306,7 @@ body.dark .footer {
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 110vh;
+    bottom: 109vh;
 }
 
 .instagram-media {
@@ -314,7 +314,7 @@ body.dark .footer {
     width: 90vw;
 }
 
-body {
+/* body {
     scrollbar-width: thin;
     scrollbar-color: transparent;
 }
@@ -328,6 +328,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-track {
+    background-color: transparent;
+} */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
     background-color: transparent;
 }
 

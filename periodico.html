@@ -4,12 +4,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="libros.css">
+        <link rel="stylesheet" href="periodico.css">
         <link
             href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
             rel='stylesheet'>
-            <link rel="shortcut icon" href="asd.png" type="image/x-icon">
-        <title>STE | Libros</title>
+        <link rel="shortcut icon" href="asdas.png" type="image/x-icon">
+        <title>STE | Periódico</title>
     </head>
 
     <body>
@@ -84,42 +84,17 @@
             </div>
         </nav>
 
-        <section class="home">
-            <div class="text">
-                Libros
-            </div>
+        <div class="iframeperiodico">
+        <iframe allowfullscreen="" scrolling="no" class="fp-iframe" style="border: 1px solid lightgray; width: 115%; height: 100vh;" src="https://heyzine.com/flip-book/d015b39bd4.html"></iframe>
+        </div>
 
-            <div style="height: 10px;"></div>
-
-            <div>
-                <a href="español.html" class="bookimg libro" id="book1">
-                    <img src="español.png" alt="LenguaEspañola">
-                </a>
-                <a href="matematicas.html" class="bookimg libro" id="book2">
-                    <img src="matematicas.png" alt="Matematicas">
-                </a>
-            </div>
-
-            <div style="height: 30px;"></div>
-
-            <div>
-                <a href="naturales.html" class="bookimg libro" id="book3">
-                    <img src="naturales.png" alt="CienciasNaturales">
-                </a>
-                <a href="sociales.html" class="bookimg libro" id="book4">
-                    <img src="sociales.png" alt="CienciasSociales">
-                </a>
-                <a href="ingles.html" class="bookimg libro" id="book5">
-                    <img src="ingles.png" alt="ingles">
-                </a>
-            </div>
-        </section>
-
-        <audio id="backgroundMusic" loop>
+        <div class="square"></div>
+        
+        <audio id="backgroundMusic" loop="loop">
             <source src="Sparks.mp3" type="audio/mp3">
             Tu navegador no soporta la etiqueta de audio.
-          </audio>
+        </audio>
 
-        <script src="libros.js"></script>
+        <script src="home.js"></script>
     </body>
 </html>

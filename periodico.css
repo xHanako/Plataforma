@@ -12,8 +12,7 @@
     --primary-color: #9C27B0;
     --primary-color-light: #9B27B00D;
     --toggle-color: #DDDDDD;
-    --text-color: #000000;
-    --bot-name: #000000;
+    --text-color: #707070;
 }
 
 body {
@@ -33,7 +32,6 @@ body.dark {
     --primary-color-light: #3A3B3C;
     --toggle-color: #FFFFFF;
     --text-color: #CCCCCC;
-    --bot-name: #FFFFFF;
 }
 
 .sidebar {
@@ -258,7 +256,24 @@ body.dark .switch::before {
     left: 20px;
 }
 
-.sidebar.close~.home {
+.home {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: all 0.4s ease;
+}
+
+.home .text {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 12px 60px;
+}
+
+.sidebar.close ~ .home {
     left: 78px;
     height: 100vh;
     width: calc(100% - 78px);
@@ -266,131 +281,6 @@ body.dark .switch::before {
 
 body.dark .home .text {
     color: var(--text-color);
-}
-
-/* AQUI INICIA LAIA */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--body-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-#chat-container {
-    width: 80vw;
-    height: 100vh;
-    border-radius: 8px;
-    overflow: hidden;
-    flex-direction: column;
-    margin-left: 10%;
-    /* border: 5px solid white; */
-}
-
-#chat-header {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-#chat-box {
-    height: calc(100% - 72px);
-    overflow-y: auto;
-    padding: 10px;
-}
-
-#chat-box::-webkit-scrollbar {
-    width: 8px;
-}
-
-#chat-box::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color);
-    border-radius: 4px;
-}
-
-#chat-box::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-#input-box {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: transparent;
-    position: fixed;
-    bottom: 0;
-    left: 55%;
-    transform: translateX(-50%);
-    width: 80%;
-    margin-bottom: 5px;
-}
-
-#user-input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #707070;
-    background-color: #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
-}
-
-#send-button {
-    padding: 8px 15px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.bot-message,
-.user-message {
-    color: var(--text-color);
-    margin-bottom: 5px;
-    padding: 10px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-}
-
-.bot-message img,
-.user-message img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.bot-container,
-.user-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-    background-color: transparent;
-}
-
-.bot-container img,
-.user-container img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-    border: 2px solid #ccc;
-}
-
-.bot-name,
-.user-name {
-    font-weight: bold;
-    color: var(--bot-name);
-    margin-right: 5px;
-    margin-top: 6px;
 }
 
 /* MUSICA */
@@ -408,5 +298,19 @@ body {
 
 .musicbtn {
     width: 100px;
-    
+}
+
+/* periodico */
+
+body {
+    overflow: hidden;
+}
+
+.square {
+    background-color: #68696a;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 55px;
+    bottom: 65px;
 }

@@ -285,25 +285,16 @@ body.dark .home .text {
 
 /* CSS DE LOS LIBROS */
 
-.libros {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 540px;
-    margin: 0 auto;
-}
-
-.bookimg {
-    flex-basis: 48%;
-    margin-bottom: 20px;
-}
-
 .bookimg img {
-    width: 100%;
-    display: block;
-    max-width: 100%;
+    width: auto;
     height: auto;
-}
+    max-height: 40vh;
+} 
+
+.libro {
+    margin-left: 60px;
+    display: inline-block;
+  }
 
 ::-webkit-scrollbar {
     width: 8px;
